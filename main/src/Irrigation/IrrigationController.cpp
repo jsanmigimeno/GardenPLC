@@ -198,7 +198,7 @@ void IrrigationController::idleLoop(const PLCState& plcState) {
 
 void IrrigationController::manualLoop(const PLCState& plcState) {
   if (!manualIrrigationEnable->value() || !valvesController->isBusy()) {
-    valvesController->cancelAllJobs();
+    valvesController->cancelCurrentJob();
     state = IrrigationControllerState::IDLE;
     lastChangeTimestamp = plcState.time;
   }
