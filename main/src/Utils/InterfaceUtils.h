@@ -31,20 +31,17 @@ class OutputRelay
 {
     public:
         OutputRelay(const uint8_t pinRef) : pinRef(pinRef) {
+            turnOff();
             setPinMode();
         }
 
-        void turnOn() {
-            if (state) return;
-            
-            digitalWrite(pinRef, HIGH);
+        void turnOn() {            
+            digitalWrite(pinRef, LOW); // Relays are active low
             state = true;
         }
 
-        void turnOff() {
-            if (!state) return;
-            
-            digitalWrite(pinRef, LOW);
+        void turnOff() {            
+            digitalWrite(pinRef, HIGH); // Relays are active low
             state = false;
         }
 
@@ -54,7 +51,7 @@ class OutputRelay
 
     private:
         const uint8_t pinRef;
-        bool state      = false;
+        bool state = false;
 
         void setPinMode() {
             pinMode(pinRef, OUTPUT);
