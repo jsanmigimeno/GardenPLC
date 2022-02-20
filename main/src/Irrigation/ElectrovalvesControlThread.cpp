@@ -4,8 +4,8 @@
 #include "ElectrovalvesControlThread.h"
 
 // Time in ms
-const uint16_t PULSE_DURATION           = 80;
-const uint16_t BETWEEN_PULSES_DURATION  = 20;
+const uint16_t PULSE_DURATION           = 100;
+const uint16_t BETWEEN_PULSES_DURATION  = 100;
 const uint16_t BETWEEN_SOURCES_DURATION = 3000;
 
 // Time in us
