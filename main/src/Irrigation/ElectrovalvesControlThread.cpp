@@ -419,6 +419,7 @@ void ElectrovalvesControlThread::reset() {
         // IMPORTANT - WAIT PULSE_DURATION AND DISABLE THE PULSE MANUALLY, AS THE RUN THREAD FUNCTION IS NOT BEING CALLED
         delay(PULSE_DURATION);
         unsetZonePulse();
+        delay(BETWEEN_PULSES_DURATION);
     }
 
     // Clear queues
