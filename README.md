@@ -9,6 +9,14 @@ A control circuit has been built with the following specifications:
 
 <br />
 
+# Dependencies
+ArduinoThread - Ivan Seidel - 2.1.1
+RTClib - Adafruit - 2.0.3
+LinkedList - Ivan Seidel - 1.3.3
+
+jsanmigimeno/MAX485
+
+
 # Structure
 ## Threads
 Task Scheduler Thread
