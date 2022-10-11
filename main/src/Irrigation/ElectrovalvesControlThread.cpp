@@ -316,7 +316,7 @@ void ElectrovalvesControlThread::setSourceState(const uint8_t sourceIndex, const
 
 // Irrigation zones functions ***************************************************************************************************
 
-bool ElectrovalvesControlThread::setJobZonesState(JobConfig* config, const bool state, uint16_t ignoreZones = 0) {
+bool ElectrovalvesControlThread::setJobZonesState(JobConfig* config, const bool state, uint16_t ignoreZones /* = 0 */) {
 
     uint16_t zones           = config->zones;
     int8_t   nextPendingZone = config->nextPendingZone;
