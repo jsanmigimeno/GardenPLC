@@ -345,7 +345,7 @@ void IrrigationController::disableGroup(uint8_t groupIdx) {
 }
         
 bool IrrigationController::isGroupEnabled(uint8_t groupIdx) {
-  if (groupIdx >= IRRIGATION_GROUPS_COUNT) return; // TODO NOTE ERROR?
+  if (groupIdx >= IRRIGATION_GROUPS_COUNT) return false; // TODO NOTE ERROR?
   return irrigationGroups[groupIdx].enabled;
 }
 
@@ -374,7 +374,7 @@ void IrrigationController::setGroupName(uint8_t groupIdx, IrrigationGroupName& g
 }
         
 uint16_t IrrigationController::getGroupZones(uint8_t groupIdx) {
-  if (groupIdx >= IRRIGATION_GROUPS_COUNT) return; // TODO NOTE ERROR?
+  if (groupIdx >= IRRIGATION_GROUPS_COUNT) return 0; // TODO NOTE ERROR?
   return irrigationGroups[groupIdx].zones;
 }
 
