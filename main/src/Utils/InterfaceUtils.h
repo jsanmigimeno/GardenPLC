@@ -36,12 +36,12 @@ class OutputRelay
         }
 
         void turnOn() {            
-            digitalWrite(pinRef, LOW); // Relays are active low
+            digitalWrite(pinRef, HIGH);
             state = true;
         }
 
         void turnOff() {            
-            digitalWrite(pinRef, HIGH); // Relays are active low
+            digitalWrite(pinRef, LOW);
             state = false;
         }
 
