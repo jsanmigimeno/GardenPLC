@@ -30,7 +30,7 @@ void SwimmingPoolController::reset() {
 
     config.maxScheduledTurnOnTimeout         = 3600;
     config.minScheduledDuration              = 5*60;
-    config.maxScheduledDuration              = 12*3600;
+    config.maxScheduledDuration              = 12*3600ul;
     config.recirculationMaxTurnOnTimeout     = 30;
     config.recirculationStopDetectionTimeout = 5;
     config.uvTurnOnOffDelay                  = 5;
