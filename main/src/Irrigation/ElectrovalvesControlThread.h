@@ -76,8 +76,8 @@ class ElectrovalvesControlThread: public Thread
 
         void run();
 
-        const OutputRelay* mainsWaterInletValve       = new OutputRelay(MAINS_WATER_INLET_VALVE_PIN);
-        const OutputRelay* swimmingPoolIrrigationPump = new OutputRelay(SWIMMING_POOL_IRRIGATION_PUMP_PIN);
+        OutputRelay* mainsWaterInletValve       = new OutputRelay(MAINS_WATER_INLET_VALVE_PIN);
+        OutputRelay* swimmingPoolIrrigationPump = new OutputRelay(SWIMMING_POOL_IRRIGATION_PUMP_PIN);
     
     private:
         LinkedList<JobConfig*> jobQueue    = LinkedList<JobConfig*>();

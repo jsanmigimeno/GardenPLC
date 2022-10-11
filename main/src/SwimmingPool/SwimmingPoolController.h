@@ -63,12 +63,12 @@ class SwimmingPoolController: public Task
             DataSaver*& dataSaver
         );
 
-        const InputSignal* manualOverride                = new InputSignal(SWIMMING_POOL_PUMP_ENABLE_INPUT_PIN);
-        const InputSignal* UVEnable                      = new InputSignal(UV_ENABLE_INPUT_PIN);
-        const InputSignal* recirculationSensor           = new InputSignal(RECIRCULATION_SENSOR_INPUT_PIN);
+        InputSignal* manualOverride                = new InputSignal(SWIMMING_POOL_PUMP_ENABLE_INPUT_PIN);
+        InputSignal* UVEnable                      = new InputSignal(UV_ENABLE_INPUT_PIN);
+        InputSignal* recirculationSensor           = new InputSignal(RECIRCULATION_SENSOR_INPUT_PIN);
 
-        const OutputRelay* swimmingPoolRecirculationPump = new OutputRelay(SWIMMING_POOL_RECIRCULATION_PUMP_PIN);
-        const OutputRelay* uvDisinfectLight              = new OutputRelay(UV_DISINFECT_LIGHT_PIN);
+        OutputRelay* swimmingPoolRecirculationPump = new OutputRelay(SWIMMING_POOL_RECIRCULATION_PUMP_PIN);
+        OutputRelay* uvDisinfectLight              = new OutputRelay(UV_DISINFECT_LIGHT_PIN);
 
         // Reset Method
         void reset();

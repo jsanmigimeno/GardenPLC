@@ -35,7 +35,7 @@ void setup() {
   IrrigationController*   irrigationController   = new IrrigationController(electrovavlesThread, dataSaver, rtc);
   SwimmingPoolController* swimmingPoolController = new SwimmingPoolController(dataSaver);
 
-  const Task* tasks[2] = {irrigationController, swimmingPoolController};
+  Task* tasks[2] = {irrigationController, swimmingPoolController};
   TaskSchedulerThread<2>* taskSchedulerThread = new TaskSchedulerThread<2>(tasks, rtc);
 
   // Communications Thread

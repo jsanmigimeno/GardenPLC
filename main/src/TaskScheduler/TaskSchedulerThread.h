@@ -30,7 +30,7 @@ template <uint8_t T>
 class TaskSchedulerThread: public Thread
 {
   public:
-    TaskSchedulerThread(const Task* tasks[T], RTC_DS3231 & rtcClock)
+    TaskSchedulerThread(Task* tasks[T], RTC_DS3231 & rtcClock)
         : clock(rtcClock)
     {
         // Check time

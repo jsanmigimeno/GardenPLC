@@ -82,8 +82,8 @@ class IrrigationController: public Task
           RTC_DS3231&                  rtcClock
         );
 
-        const InputSignal* manualIrrigationEnable = new InputSignal(IRRIGATION_FROM_SWIMMING_POOL_ENABLE_INPUT_PIN);
-        const InputSignal* irrigationPressureSensor         = new InputSignal(IRRIGATION_PRESSURE_SENSOR_INPUT_PIN);
+        InputSignal* manualIrrigationEnable   = new InputSignal(IRRIGATION_FROM_SWIMMING_POOL_ENABLE_INPUT_PIN);
+        InputSignal* irrigationPressureSensor = new InputSignal(IRRIGATION_PRESSURE_SENSOR_INPUT_PIN);
 
         // Reset Methods
         void resetIrrigationManualConfig();
